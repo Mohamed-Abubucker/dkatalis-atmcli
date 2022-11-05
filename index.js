@@ -4,8 +4,6 @@ const { login, logout, deposit, transfer, clear } = require('./operations');
 
 const argv = yargs(hideBin(process.argv)).argv;
 
-console.log(argv);
-
 switch (argv._[0]) {
     case 'login':
         login(argv._[1]).catch(err => console.error(err, 'login failed'));
